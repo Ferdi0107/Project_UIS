@@ -16,7 +16,8 @@
             padding: 20px;
         }
 
-        h1,
+        h1 {}
+
         h3,
         p {
             color: #388E3C;
@@ -170,4 +171,28 @@
             width: auto;
             height: 50px;
             object-fit: cover;
+        }
+
+        #map-container {
+            width: 80%;
+            /* Lebar peta 80% */
+            margin: 0 auto;
+            /* Menempatkan peta di tengah */
+            padding: 10px;
+            /* Memberikan padding untuk efek border */
+            border: 5px solid white;
+            /* Menambahkan border putih di sekitar peta */
+            border-radius: 10px;
+            /* Menambahkan sudut melengkung untuk border */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            /* Efek bayangan ringan di sekitar peta */
+        }
+
+        #map {
+            width: 100%;
+            /* Agar peta mengambil lebar 100% dari container */
+            height: 600px;
+            /* Menyesuaikan tinggi peta */
+            border-radius: 6px;
+            /* Sudut melengkung untuk peta */
         }

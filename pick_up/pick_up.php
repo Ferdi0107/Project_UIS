@@ -15,6 +15,8 @@
     <!-- Leaflet CSS -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
     <!-- Custom CSS -->
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
     <link rel="stylesheet" href="styles.css" />
 </head>
 
@@ -24,7 +26,13 @@
         <img src="../assets/pickupsampah.png" alt="Truk Sampah" class="icon-truck" />
     </div>
     <div class="app-window">
-        <div class="app-header">RESIK</div>
+        <div class="app-header">
+            <i class="fas fa-home" style="font-size: 30px; cursor: pointer;"
+                onclick="window.location.href='../dashboard/dashboard.php'"></i>
+
+            <h1>RESIK</h1>
+        </div>
+
         <div class="app-body">
             <h1>Jadwal Penjemputan Sampah</h1>
             <p class="subtitle">Atur jadwal untuk penjemputan sampah di lokasi Anda.</p>
@@ -33,8 +41,8 @@
                     <div class="form-group col-md-6">
                         <label for="armadaType">Jenis Armada</label>
                         <select id="armadaType" class="custom-select">
-                            <option value="besar">Armada Besar</option>
-                            <option value="kecil">Armada Kecil</option>
+                            <option value="besar">Armada Besar (Mobil Pick-Up)</option>
+                            <option value="kecil">Armada Kecil (Motor Tosa)</option>
                         </select>
                     </div>
                     <div class="form-group col-md-3">

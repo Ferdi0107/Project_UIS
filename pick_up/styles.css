@@ -45,14 +45,35 @@ body {
 .app-header {
     background: rgba(255, 255, 255, 0.8);
     /* putih transparan 50% */
-    padding: 12px 20px;
+    padding: 12px 12px;
     border-bottom: 1px solid #ddd;
     font-size: 30px;
     font-weight: 600;
     text-align: center;
+    overflow: hidden;
     /* Jika ingin full transparan, ganti jadi background: transparent; */
 }
 
+.app-header i {
+    float: left;
+    color: #2c6e49;
+    /* Membuat ikon berada di sebelah kiri */
+    font-size: 30px;
+    /* Ukuran ikon */
+    margin-right: 10px;
+    margin-top: 10px;
+    /* Jarak antara ikon dan teks */
+    cursor: pointer;
+    /* Pointer saat hover */
+}
+
+.app-header h1 {
+    color: #2c6e49;
+    margin: 0;
+    /* Menghilangkan margin default pada <h1> */
+    display: inline-block;
+    /* Menjaga teks tetap pada satu baris dengan ikon */
+}
 
 .app-body {
     padding: 30px 40px;
