@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;700&display=swap');
+
+body {
+    font-family: 'Baloo 2', cursive;
+    font-weight: 600;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
+    background: url('../assets/bg_pick_up.png') no-repeat center center/cover;
+}
+
+.app-window {
+    width: 800px;
+    margin: 40px auto;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.card-illustration {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 24px;
+    /* Jarak antar gambar */
+    margin-top: 24px;
+    margin-bottom: -40px;
+    /* Supaya overlap sedikit ke card */
+    z-index: 10;
+    position: relative;
+}
+
+.icon-trash {
+    width: 140px;
+    height: auto;
+}
+
+.icon-truck {
+    width: 140px;
+    height: auto;
+}
+
+
+.app-header {
+    background: rgba(255, 255, 255, 0.8);
+    /* putih transparan 50% */
+    padding: 12px 20px;
+    border-bottom: 1px solid #ddd;
+    font-size: 30px;
+    font-weight: 600;
+    text-align: center;
+    /* Jika ingin full transparan, ganti jadi background: transparent; */
+}
+
+
+.app-body {
+    padding: 30px 40px;
+    background: rgba(255, 255, 255, 0.8);
+    font-family: 'Baloo 2', cursive;
+    /* putih transparan 30% */
+    border-radius: 0 0 12px 12px;
+    /* opsional, biar lebih halus */
+    /* Jika ingin full transparan, ganti jadi background: transparent; */
+}
+
+.app-body h1 {
+    margin-bottom: 8px;
+    font-size: 28px;
+    color: #2c6e49;
+}
+
+.subtitle {
+    margin-bottom: 24px;
+    color: #4a6f51;
+}
+
+.card-schedule {
+    background: #fff;
+    border-radius: 10px;
+    padding: 24px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
+}
+
+.form-group label {
+    font-weight: 500;
+    color: #2c6e49;
+}
+
+.form-control,
+.custom-select {
+    border: 1px solid #c8e2d0;
+    border-radius: 6px;
+    padding: 8px 12px;
+}
+
+.form-control:focus,
+.custom-select:focus {
+    border-color: #28a745;
+    box-shadow: none;
+}
+
+/* ** PENTING: beri tinggi eksplisit untuk #map ** */
+#map {
+    width: 100%;
+    height: 250px;
+    border-radius: 6px;
+    margin-bottom: 8px;
+}
+
+.address-display {
+    font-size: 14px;
+    color: #333;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.address-display button {
+    font-size: 14px;
+    color: #28a745;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.payment-options label {
+    margin-right: 20px;
+    font-weight: 500;
+    color: #2c6e49;
+}
+
+.total-display {
+    background: #e8f5e9;
+    padding: 12px 16px;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #2c6e49;
+    margin-top: 16px;
+}
+
+.btn-confirm {
+    width: 100%;
+    padding: 12px;
+    background: #28a745;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 600;
+    margin-top: 24px;
+    cursor: pointer;
+}
+
+.btn-confirm:hover {
+    background: #218838;
+}
+
+.app-footer {
+    padding: 12px 20px;
+    background: rgba(44, 110, 73, 0.8);
+    /* Warna hijau translucent */
+    color: #fff;
+    text-align: center;
+}

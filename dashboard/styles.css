@@ -1,0 +1,173 @@
+        /* General Styles */
+        body {
+            font-family: 'Baloo 2', cursive;
+            background-color: #f9f9f9;
+            /* Latar belakang cerah */
+            margin: 0;
+            padding: 0;
+        }
+
+        .content {
+            width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+            background: url('../assets/bg_content.png') no-repeat center center/cover;
+            padding: 20px;
+        }
+
+        h1,
+        h3,
+        p {
+            color: #388E3C;
+
+        }
+
+        .hero-section {
+            background: url('https://via.placeholder.com/1920x600/28a745/ffffff?text=Smart+Environment') no-repeat center center/cover;
+            color: white;
+            text-align: center;
+            padding: 120px 0;
+        }
+
+        .hero-section h1 {
+            font-size: 60px;
+            font-weight: bold;
+        }
+
+        .hero-section p {
+            font-size: 20px;
+            margin-top: 20px;
+        }
+
+        .cta-button {
+            background-color: #28a745;
+            color: white;
+            padding: 15px 40px;
+            font-size: 18px;
+            border-radius: 30px;
+            margin-top: 30px;
+            text-decoration: none;
+        }
+
+        .cta-button:hover {
+            background-color: #218838;
+            text-decoration: none;
+        }
+
+        .features-section {
+            text-align: center;
+            padding: 50px 20px;
+        }
+
+        .features-section h3 {
+            margin-bottom: 40px;
+            font-size: 32px;
+        }
+
+        .feature-card {
+            margin: 15px;
+            border-radius: 10px;
+            padding: 30px;
+            background-color: white;
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .feature-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: contain;
+            /* ubah dari cover ke contain */
+            border-radius: 10px;
+            background: #fff;
+            /* opsional, agar area kosong putih */
+            display: block;
+            margin: 0 auto;
+        }
+
+        .feature-card h4 {
+            color: #28a745;
+            font-size: 24px;
+            font-weight: 800;
+            /* lebih tebal, bisa juga pakai 700 */
+            letter-spacing: 0.5px;
+            /* opsional, agar lebih rapi */
+        }
+
+        .feature-card p {
+            font-size: 16px;
+            color: #555;
+            font-weight: 600;
+            /* lebih tebal dari normal */
+            letter-spacing: 0.1px;
+            /* opsional */
+        }
+
+        .footer {
+            background-color: #2c6e49;
+            /* color: white; */
+            padding: 30px 20px;
+            text-align: center;
+        }
+
+        .footer a {
+            color: #28a745;
+            text-decoration: none;
+        }
+
+        .scale-section {
+            background-color: rgba(241, 248, 233, 0.5);
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        .scale-section h3 {
+            font-family: 'Baloo 2', cursive;
+            font-size: 50px;
+            font-weight: 800;
+            letter-spacing: 0.1px;
+            margin-top: 80px;
+            margin-right: 90px;
+        }
+
+        .scale-card h4 {
+            color: #28a745;
+            font-size: 24px;
+            font-weight: 800;
+            /* lebih tebal, bisa juga pakai 700 */
+            letter-spacing: 0.5px;
+            /* opsional, agar lebih rapi */
+        }
+
+        .scale-card p {
+            font-size: 16px;
+            color: #555;
+            font-weight: 600;
+            /* lebih tebal dari normal */
+            letter-spacing: 0.1px;
+            /* opsional */
+        }
+
+        .scale-card {
+            background-color: white;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out;
+            height: 200px;
+        }
+
+        .scale-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .scale-card img {
+            width: auto;
+            height: 50px;
+            object-fit: cover;
+        }
