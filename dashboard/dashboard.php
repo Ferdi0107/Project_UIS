@@ -18,7 +18,7 @@
 <body>
     <div class="content">
         <div class="hero-section">
-            <h1>Selamat Datang di RESIK</h1>
+            <h2>Selamat Datang di RESIK</h2>
             <p>Ubah sampah Anda menjadi poin dan hadiahkan untuk masa depan yang lebih hijau!</p>
             <a href="#features" class="cta-button">Mulai Sekarang</a>
         </div>
@@ -42,9 +42,9 @@
                     </div>
                 </div>
                 <div class="col-md-3">
-                    <div class="feature-card">
+                    <div class="feature-card" style="cursor:pointer;" onclick="window.location.href='../pricelist/pricelist.php'">
                         <img src="../assets/listsampah.png" alt="Pricelist Sampah">
-                        <h4>Pencatatan Sampah</h4>
+                        <h4>Klasifikasi Sampah</h4>
                         <p>Cek harga terbaru untuk setiap jenis sampah yang bisa ditukarkan.</p>
                     </div>
                 </div>

@@ -1,0 +1,82 @@
+body {
+    font-family: 'Mulish', sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.category {
+    margin-bottom: 40px;
+}
+
+.category h2 {
+     font-size: 28px;
+    color: #388E3C;
+    margin-bottom: 20px;
+    margin-top: 0;
+    text-align: left;  /* Menjaga teks tetap di kiri */
+    display: block;
+    width: 100%;  /* Membuat lebar h2 memenuhi seluruh baris */
+}
+
+
+.main-container {
+    display: flex;
+    justify-content: center;  /* Menempatkan konten di tengah halaman */
+    padding: 20px;
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;  /* Membuat card membungkus ke baris berikutnya */
+    justify-content: flex-start;  /* Mengatur card agar berada di kiri */
+    gap: 20px;  /* Jarak antar card */
+    max-width: 1200px;  /* Membatasi lebar card-container */
+    width: 100%;
+}
+
+.card {
+    width: 350px;  /* Lebar card tetap */
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.card h4 {
+    font-size: 20px;
+    color: #388E3C;
+    margin: 15px 0;
+}
+
+.card p {
+    font-size: 16px;
+    color: #555;
+}
+
+@media (max-width: 1024px) {
+    .card-container {
+        justify-content: space-evenly; /* Menjaga jarak antar card di layar lebih kecil */
+    }
+}
+
+@media (max-width: 768px) {
+    .card {
+        width: 100%; /* Untuk layar ponsel, card tampil satu per satu */
+    }
+}
