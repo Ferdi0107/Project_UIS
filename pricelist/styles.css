@@ -125,11 +125,15 @@ body {
 }
 
 .card img {
-    width: 100%;
-    height: 150px;
-    object-fit: cover;
+    width: 200px;          /* Ukuran kotak tetap */
+    height: 200px;         /* Ukuran kotak tetap */
+    object-fit: cover;     /* Crop supaya gambar full kotak */
+    aspect-ratio: 1/1;     /* Pastikan selalu kotak (modern browser) */
     border-radius: 10px;
+    margin: 0 auto;        /* Biar selalu di tengah kartu */
+    display: block;
 }
+
 
 .card h4 {
     font-size: 20px;

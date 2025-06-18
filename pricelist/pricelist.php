@@ -58,27 +58,27 @@ $category = isset($_GET['category']) ? $_GET['category'] : ''; // Mengambil kate
                         <p></p>
                         <p></p>
                         <div class="card">
-                            <img src="path-to-kardus-bagus-image.jpg" alt="Kardus Bagus">
+                            <img src="..\assets\kardusBagus.png" alt="Kardus Bagus">
                             <h4>Kardus Bagus</h4>
                             <p>Harga: Rp 1.300 / Kg</p>
                         </div>
                         <div class="card">
-                            <img src="path-to-kardus-jelek-image.jpg" alt="Kardus Jelek">
+                            <img src="..\assets\kardusUsang.png" alt="Kardus Jelek">
                             <h4>Kardus Jelek</h4>
                             <p>Harga: Rp 1.200 / Kg</p>
                         </div>
                         <div class="card">
-                            <img src="path-to-koran-image.jpg" alt="Koran">
+                            <img src="..\assets\koran.png" alt="Koran">
                             <h4>Koran</h4>
                             <p>Harga: Rp 3.500 / Kg</p>
                         </div>
                         <div class="card">
-                            <img src="path-to-hvs-image.jpg" alt="HVS">
+                            <img src="..\assets\hvs.png" alt="HVS">
                             <h4>HVS</h4>
                             <p>Harga: Rp 2.000 / Kg</p>
                         </div>
                         <div class="card">
-                            <img src="path-to-majalah-image.jpg" alt="Majalah">
+                            <img src="..\assets\majalah.png" alt="Majalah">
                             <h4>Majalah</h4>
                             <p>Harga: Rp 700 / Kg</p>
                         </div>
@@ -93,37 +93,37 @@ $category = isset($_GET['category']) ? $_GET['category'] : ''; // Mengambil kate
                         <p></p>
                         <!-- Card PET Bening Bersih -->
                         <div class="card">
-                            <img src="path-to-pet-bening-bersih-image.jpg" alt="PET Bening Bersih">
+                            <img src="..\assets\petBeningBersih.png" alt="PET Bening Bersih">
                             <h4>PET Bening Bersih</h4>
                             <p>Harga: Rp 4.200 / Kg</p>
                         </div>
                         <!-- Card PET Biru Muda Bersih -->
                         <div class="card">
-                            <img src="path-to-pet-biru-muda-bersih-image.jpg" alt="PET Biru Muda Bersih">
+                            <img src="..\assets\petBiruMuda.png" alt="PET Biru Muda Bersih">
                             <h4>PET Biru Muda Bersih</h4>
                             <p>Harga: Rp 3.200 / Kg</p>
                         </div>
                         <!-- Card PET Warna Bersih -->
                         <div class="card">
-                            <img src="path-to-pet-warna-bersih-image.jpg" alt="PET Warna Bersih">
+                            <img src="..\assets\petWarnaBersih.png" alt="PET Warna Bersih">
                             <h4>PET Warna Bersih</h4>
                             <p>Harga: Rp 1.200 / Kg</p>
                         </div>
                         <!-- Card PET Kotor -->
                         <div class="card">
-                            <img src="path-to-pet-kotor-image.jpg" alt="PET Kotor">
+                            <img src="..\assets\petKotor.png" alt="PET Kotor">
                             <h4>PET Kotor</h4>
                             <p>Harga: Rp 500 / Kg</p>
                         </div>
                         <!-- Card PET Jelek/Minyak -->
                         <div class="card">
-                            <img src="path-to-pet-jelek-image.jpg" alt="PET Jelek/Minyak">
+                            <img src="..\assets\petMinyak.png" alt="PET Jelek/Minyak">
                             <h4>PET Jelek/Minyak</h4>
                             <p>Harga: Rp 100 / Kg</p>
                         </div>
                         <!-- Card PET Galon Le Minerale -->
                         <div class="card">
-                            <img src="path-to-pet-galon-image.jpg" alt="PET Galon Le Minerale">
+                            <img src="..\assets\petGalon.png" alt="PET Galon Le Minerale">
                             <h4>PET Galon Le Minerale</h4>
                             <p>Harga: Rp 1.500 / Kg</p>
                         </div>
@@ -138,19 +138,19 @@ $category = isset($_GET['category']) ? $_GET['category'] : ''; // Mengambil kate
                         <p></p>
                         <!-- Card Tutup Botol AMDK -->
                         <div class="card">
-                            <img src="path-to-tutup-botol-amdk-image.jpg" alt="Tutup Botol AMDK">
+                            <img src="..\assets\tutupBotolAMDK.png" alt="Tutup Botol AMDK">
                             <h4>Tutup Botol AMDK</h4>
                             <p>Harga: Rp 2.500 / Kg</p>
                         </div>
                         <!-- Card Tutup Galon -->
                         <div class="card">
-                            <img src="path-to-tutup-galon-image.jpg" alt="Tutup Galon">
+                            <img src="..\assets\tutupGalon.png" alt="Tutup Galon">
                             <h4>Tutup Galon</h4>
                             <p>Harga: Rp 3.500 / Kg</p>
                         </div>
                         <!-- Card Tutup Campur -->
                         <div class="card">
-                            <img src="path-to-tutup-campur-image.jpg" alt="Tutup Campur">
+                            <img src="..\assets\tutupCampur.png" alt="Tutup Campur">
                             <h4>Tutup Campur</h4>
                             <p>Harga: Rp 1.000 / Kg</p>
                         </div>
@@ -165,33 +165,27 @@ $category = isset($_GET['category']) ? $_GET['category'] : ''; // Mengambil kate
                         <p></p>
                         <!-- Card Botol Bensin Besar -->
                         <div class="card">
-                            <img src="path-to-botol-bensin-besar-image.jpg" alt="Botol Bensin Besar">
+                            <img src="..\assets\botolBensin.png" alt="Botol Bensin Besar">
                             <h4>Botol Bensin Besar</h4>
                             <p>Harga: Rp 800 / Biji</p>
                         </div>
                         <!-- Card Botol Bir Bintang Besar -->
                         <div class="card">
-                            <img src="path-to-botol-bir-bintang-besar-image.jpg" alt="Botol Bir Bintang Besar">
+                            <img src="..\assets\botolBir.png" alt="Botol Bir Bintang Besar">
                             <h4>Botol Bir Bintang Besar</h4>
                             <p>Harga: Rp 500 / Biji</p>
                         </div>
                         <!-- Card Botol Kecap/Saos Besar -->
                         <div class="card">
-                            <img src="path-to-botol-kecap-saos-besar-image.jpg" alt="Botol Kecap/Saos Besar">
+                            <img src="..\assets\botolKecapSaos.png" alt="Botol Kecap/Saos Besar">
                             <h4>Botol Kecap/Saos Besar</h4>
                             <p>Harga: Rp 300 / Biji</p>
                         </div>
                         <!-- Card Botol/Beling Bening -->
                         <div class="card">
-                            <img src="path-to-botol-beling-bening-image.jpg" alt="Botol/Beling Bening">
+                            <img src="..\assets\botolBensin.png" alt="Botol/Beling Bening">
                             <h4>Botol/Beling Bening</h4>
                             <p>Harga: Rp 100 / Kg</p>
-                        </div>
-                        <!-- Card Botol/Beling Warna -->
-                        <div class="card">
-                            <img src="path-to-botol-beling-warna-image.jpg" alt="Botol/Beling Warna">
-                            <h4>Botol/Beling Warna</h4>
-                            <p>Harga: Rp 75 / Kg</p>
                         </div>
                     </div>';
                     }
