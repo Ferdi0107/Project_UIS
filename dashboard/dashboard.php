@@ -9,7 +9,6 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;700&display=swap" rel="stylesheet">
-
     <!-- Leaflet CSS -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
 
@@ -49,7 +48,7 @@
                     </div>
                 </div>
                 <div class="col-md-3">
-                    <div class="feature-card">
+                    <div class="feature-card" style="cursor:pointer;" onclick="window.location.href='../jadwal_penjemputan/jadwal.php'">
                         <img src="../assets/schedulesampah.png" alt="Jadwal Penjemputan">
                         <h4>Jadwal Penjemputan</h4>
                         <p>Jadwal layanan penjemputan sampah dengan pilihan waktu yang fleksibel.</p>

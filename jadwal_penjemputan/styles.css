@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;700&display=swap');
+
+body {
+    font-family: 'Baloo 2', cursive;
+    font-weight: 600;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
+    background: url('../assets/bg_pick_up.png') no-repeat center center/cover;
+}
+
+.app-window {
+    width: 800px;
+    margin: 40px auto;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.card-illustration {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 24px;
+    margin-top: 24px;
+    margin-bottom: -40px;
+    z-index: 10;
+    position: relative;
+}
+
+.icon-trash {
+    width: 140px;
+    height: auto;
+}
+
+.icon-truck {
+    width: 140px;
+    height: auto;
+}
+
+
+.app-header {
+    background: rgba(255, 255, 255, 0.8);
+    padding: 12px 12px;
+    border-bottom: 1px solid #ddd;
+    font-size: 30px;
+    font-weight: 600;
+    text-align: center;
+    overflow: hidden;
+}
+
+.app-header i {
+    float: left;
+    color: #2c6e49;
+    font-size: 30px;
+    margin-right: 10px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.app-header h1 {
+    color: #2c6e49;
+    margin: 0;
+    display: inline-block;
+}
+
+.app-body {
+    padding: 30px 40px;
+    background: rgba(255, 255, 255, 0.8);
+    font-family: 'Baloo 2', cursive;
+    border-radius: 0 0 12px 12px;
+}
+
+.app-body h1 {
+    margin-bottom: 8px;
+    font-size: 28px;
+    color: #2c6e49;
+}
+
+.subtitle {
+    margin-bottom: 24px;
+    color: #4a6f51;
+}
+
+.card-schedule {
+    background: #fff;
+    border-radius: 10px;
+    padding: 24px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
+}
+
+.form-group label {
+    font-weight: 500;
+    color: #2c6e49;
+}
+
+.form-control,
+.custom-select {
+    border: 1px solid #c8e2d0;
+    border-radius: 6px;
+    padding: 8px 12px;
+}
+
+.form-control:focus,
+.custom-select:focus {
+    border-color: #28a745;
+    box-shadow: none;
+}
+
+
+.app-footer {
+    padding: 12px 20px;
+    background: rgba(44, 110, 73, 0.8);
+    /* Warna hijau translucent */
+    color: #fff;
+    text-align: center;
+}
+
+.jadwal-mingguan-grid {
+  display: flex;
+  gap: 18px;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  margin-top: 18px;
+}
+.jadwal-hari-card {
+  background: linear-gradient(135deg, #e8f8f5 80%, #d0f5e8 100%);
+  border-radius: 14px;
+  box-shadow: 0 4px 14px rgba(44, 110, 73, 0.10);
+  padding: 18px 22px;
+  min-width: 180px;
+  max-width: 200px;
+  margin-bottom: 12px;
+  transition: box-shadow 0.2s;
+}
+.jadwal-hari-card:hover {
+  box-shadow: 0 8px 32px rgba(44, 110, 73, 0.18);
+}
+.hari-title {
+  font-weight: 700;
+  color: #219150;
+  font-size: 19px;
+  letter-spacing: 1px;
+  margin-bottom: 12px;
+}
+.jadwal-hari-card ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.jadwal-hari-card li {
+  margin-bottom: 10px;
+  color: #155940;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+}
+.jadwal-hari-card li i {
+  color: #28a745;
+  margin-right: 9px;
+  font-size: 15px;
+}
+.lokasi {
+  margin-left: 10px;
+  color: #1976d2;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+.jadwal-hari-card.libur {
+  background: linear-gradient(135deg, #f0e3e3 70%, #ffe2e2 100%);
+  color: #b48b8b;
+  text-align: center;
+}
+.libur-text {
+  font-size: 17px;
+  margin-top: 18px;
+  font-weight: 600;
+  color: #a65b5b;
+}
