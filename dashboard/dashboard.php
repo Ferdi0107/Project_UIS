@@ -26,7 +26,7 @@
             <h3>Layanan Kami</h3>
             <div class="row justify-content-center">
                 <div class="col-md-3">
-                    <div class="feature-card">
+                     <div class="feature-card" style="cursor:pointer;" onclick="window.location.href='../tukar_sampah/tukar_sampah.php'">
                         <img src="../assets/tukarsampah.png" alt="Penukaran Sampah">
                         <h4>Penukaran Sampah</h4>
                         <p>Jual sampah Anda dan dapatkan poin untuk ditukarkan dengan hadiah menarik.</p>
