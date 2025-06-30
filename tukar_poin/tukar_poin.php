@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" />
     <!-- Custom CSS -->
     <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css" />
 </head>
 
 <body>
@@ -18,6 +19,8 @@
         <div class="card-box mx-auto">
             <div class="container px-4 py-4">
                 <!-- Judul Halaman -->
+                <i class="fas fa-home" style="font-size: 30px; cursor: pointer;color: #2c6e49;"
+                    onclick="window.location.href='../dashboard/dashboard.php'"></i>
                 <h1 class="page-title text-success mb-3">Merchant Kerja Sama</h1>
 
                 <!-- Saldo Poins (Tukar Poin) -->
@@ -89,9 +92,11 @@
                                 <h5 class="card-title">Sentosa Swalayan</h5>
                                 <p class="mb-1">Diskon 5% hingga Rp25.000</p>
                                 <small class="text-muted">Berlaku: 10/06/2024 – 30/06/2024</small>
-                                <a href="#" class="btn btn-success btn-block mt-auto">
+                                <!-- Tombol baru untuk memicu modal -->
+                                <button type="button" class="btn btn-success btn-block mt-auto btn-voucher"
+                                    data-code="VCHR-RS05">
                                     Dapatkan Voucher
-                                </a>
+                                </button>
                             </div>
                         </div>
                     </div>
@@ -196,6 +201,36 @@
         });
 
     </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Pilih semua tombol "Dapatkan Voucher"
+            document.querySelectorAll('.btn-voucher').forEach(btn => {
+                btn.addEventListener('click', () => {
+                    const code = btn.getAttribute('data-code');
+
+                    Swal.fire({
+                        title: `Ambil Voucher ${code}?`,
+                        text: "Pastikan poin Anda mencukupi sebelum konfirmasi.",
+                        icon: 'question',
+                        showCancelButton: true,
+                        confirmButtonText: 'Ya, ambil',
+                        cancelButtonText: 'Batal',
+                        reverseButtons: false
+                    }).then(result => {
+                        if (result.isConfirmed) {
+                            Swal.fire(
+                                'Berhasil!',
+                                `Voucher ${code} telah ditambahkan ke akun Anda.`,
+                                'success'
+                            );
+                            // TODO: Tambahkan AJAX atau logic penukaran poin di sini
+                        }
+                    });
+                });
+            });
+        });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
 </body>
 

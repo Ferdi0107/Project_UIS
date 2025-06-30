@@ -29,7 +29,8 @@
                 <ul>
                     <li onclick="window.location.href='../tukar_sampah/tukar_sampah.php'"><strong>Balance:</strong> Rp
                         250.000</li>
-                    <li><strong>Eco-Points:</strong> 1.250 pt</li>
+                    <li onclick="window.location.href='../tukar_poin/tukar_poin.php'"><strong>Eco-Points:</strong> 1.250
+                        pt</li>
                     <li class="divider"></li>
                     <li><a href="#settings">Settings</a></li>
                     <!-- Anda bisa tambahkan links lain: Profile, Logout, dsb. -->
@@ -101,10 +102,11 @@
                     </div>
                 </div>
                 <div class="col-md-3">
-                    <div class="scale-card" style="cursor: pointer;" onclick="window.location.href='../tukar_poin/tukar_poin.php'">
+                    <div class="scale-card" style="cursor: pointer;"
+                        onclick="window.location.href='../tukar_poin/tukar_poin.php'">
                         <img src="../assets/kerjasama.png" alt="Merchants">
                         <h4>Tukar Poin</h4>
-                        <p>Bergabung dengan berbagai merchant untuk meningkatkan pemberdayaan sampah di masyarakat.</p>
+                        <p>Tukar poin Anda sekarang dan raih reward seru sambil mendukung bumi hijau!</p>
                     </div>
                 </div>
             </div>
@@ -118,6 +120,7 @@
 
     <div class="footer">
         <p>© 2025 Smart Environment - Bank Sampah | <a href="mailto:admin@banksampah.com">Kontak Kami</a></p>
+        <p class="credit">Created by Ferdi &amp; Gio</p>
     </div>
 
     <!-- Leaflet JS -->
