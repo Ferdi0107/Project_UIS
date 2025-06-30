@@ -7,36 +7,39 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Jadwal Penjemputan Sampah</title>
+    <title>Jadwal Penjemputan Sampah | RESIK</title>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
     <!-- Google Fonts -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;700&display=swap" />
     <!-- Leaflet CSS -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
-    <!-- Custom CSS -->
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+    <!-- SweetAlert2 CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="styles.css" />
 </head>
 
 <body>
-    <div class="card-illustration">
-        <img src="../assets/sampah_pickup.png" alt="Tempat Sampah" class="icon-trash" />
-        <img src="../assets/pickupsampah.png" alt="Truk Sampah" class="icon-truck" />
+    <div class="card-illustration text-center my-4">
+        <img src="../assets/sampah_pickup.png" alt="Tempat Sampah" class="icon-trash mr-3" width="100" />
+        <img src="../assets/pickupsampah.png" alt="Truk Sampah" class="icon-truck" width="100" />
     </div>
-    <div class="app-window">
-        <div class="app-header">
-            <i class="fas fa-home" style="font-size: 30px; cursor: pointer;"
-                onclick="window.location.href='../dashboard/dashboard.php'"></i>
 
-            <h1>RESIK</h1>
+    <div class="app-window mx-auto" style="max-width:600px;">
+        <div class="app-header d-flex align-items-center px-3 py-2 bg-success text-white">
+            <i class="fas fa-home mr-3" style="font-size: 24px; cursor: pointer;"
+                onclick="window.location.href='../dashboard/dashboard.php'"></i>
+            <h4 class="mb-0">RESIK</h4>
         </div>
 
-        <div class="app-body">
-            <h1>Jadwal Penjemputan Sampah</h1>
-            <p class="subtitle">Atur jadwal untuk penjemputan sampah di lokasi Anda.</p>
-            <div class="card-schedule">
+        <div class="app-body p-4 bg-white">
+            <h2>Jadwal Penjemputan Sampah</h2>
+            <p class="subtitle text-muted">Atur jadwal untuk penjemputan sampah di lokasi Anda.</p>
+
+            <div class="card-schedule p-3 border rounded">
                 <div class="form-row">
                     <div class="form-group col-md-6">
                         <label for="armadaType">Jenis Armada</label>
@@ -60,102 +63,138 @@
                     <label>Pilih Lokasi Penjemputan:</label>
                     <div class="mb-2">
                         <input type="radio" id="modeAlamat" name="lokasiMode" value="alamat" checked>
-                        <label for="modeAlamat">Masukkan Alamat</label>
+                        <label for="modeAlamat" class="mr-3">Masukkan Alamat</label>
+
                         <input type="radio" id="modePeta" name="lokasiMode" value="peta">
                         <label for="modePeta">Pilih di Peta</label>
                     </div>
-                    <!-- Input alamat manual -->
+
+                    <!-- Alamat manual -->
                     <input type="text" class="form-control mb-2" id="alamatManual"
-                        placeholder="Masukkan alamat lengkap...">
-                    <!-- Peta hanya muncul jika mode 'peta' -->
-                    <div id="mapSection" style="display:none; margin-top:10px;">
-                        <div id="map" style="width:100%;height:250px;border-radius:6px;"></div>
-                        <div class="address-display mt-2">
-                            <span id="addressText">Pilih lokasi di peta</span>
-                            <button id="changeLocation" type="button">Center</button>
+                        placeholder="Masukkan alamat lengkap..." />
+
+                    <!-- Map Section -->
+                    <div id="mapSection" style="display:none;">
+                        <div id="map" style="width:100%; height:250px; border-radius:6px;"></div>
+                        <div class="address-display mt-2 d-flex align-items-center">
+                            <span id="addressText" class="mr-2">Pilih lokasi di peta</span>
+                            <button id="changeLocation" class="btn btn-sm btn-outline-secondary">Center</button>
                         </div>
-                        <button id="confirmMapLocation" type="button" class="btn btn-success btn-sm mt-2">Konfirmasi
-                            Lokasi</button>
+                        <button id="confirmMapLocation" class="btn btn-success btn-sm mt-2">Konfirmasi Lokasi</button>
                     </div>
                 </div>
 
                 <!-- Pembayaran -->
-                <div class="form-group payment-options">
-                    <label>Pembayaran</label><br />
-                    <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="payment" id="cod" value="cod" checked />
-                        <label class="form-check-label" for="cod">COD</label>
-                    </div>
-                    <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="payment" id="online" value="online" />
-                        <label class="form-check-label" for="online">Online Payment</label>
+                <div class="form-group">
+                    <label>Pembayaran</label>
+                    <div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="payment" id="cod" value="cod" checked />
+                            <label class="form-check-label" for="cod">COD</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="payment" id="online" value="online" />
+                            <label class="form-check-label" for="online">Online Payment</label>
+                        </div>
                     </div>
                 </div>
-                <div class="total-display">
-                    Total: <span id="totalCost">Rp150.000</span>
+
+                <div class="total-display mb-3">
+                    <strong>Total:</strong> <span id="totalCost">Rp150.000</span>
                 </div>
-                <button class="btn-confirm">Konfirmasi Penjemputan</button>
+
+                <button id="btnConfirm" class="btn btn-success btn-block">Konfirmasi Penjemputan</button>
             </div>
         </div>
-        <div class="app-footer">© 2025 RESIK</div>
+
+        <div class="app-footer text-center py-2 text-white bg-success">
+            © 2025 RESIK
+        </div>
     </div>
 
-    <!-- JS -->
+    <!-- Dependencies -->
     <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
     <script>
-        // --- MODE ALAMAT / PETA ---
-        document.getElementById('modeAlamat').addEventListener('change', function () {
-            document.getElementById('alamatManual').disabled = false;
-            document.getElementById('mapSection').style.display = 'none';
+        // Mode alamat vs peta
+        $('#modeAlamat').on('change', function () {
+            $('#alamatManual').prop('disabled', false);
+            $('#mapSection').hide();
         });
-        document.getElementById('modePeta').addEventListener('change', function () {
-            document.getElementById('alamatManual').disabled = true;
-            document.getElementById('mapSection').style.display = 'block';
-            setTimeout(() => { map.invalidateSize(); }, 100);
+        $('#modePeta').on('change', function () {
+            $('#alamatManual').prop('disabled', true);
+            $('#mapSection').show();
+            setTimeout(() => map.invalidateSize(), 200);
         });
 
-        // --- LEAFLET MAP INIT ---
-        const surabaya = [-7.2575, 112.7521];
-        const map = L.map('map').setView(surabaya, 13);
+        // Leaflet map init
+        const startCoords = [-7.2575, 112.7521];
+        const map = L.map('map').setView(startCoords, 13);
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-            attribution: '&copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors',
+            attribution: '&copy; OpenStreetMap contributors'
         }).addTo(map);
 
-        let marker = L.marker(surabaya, { draggable: true }).addTo(map);
-
+        // Draggable marker
+        let marker = L.marker(startCoords, { draggable: true }).addTo(map);
         function updateAddress(lat, lng) {
-            document.getElementById('addressText').textContent =
-                `Lat: ${lat.toFixed(5)}, Lng: ${lng.toFixed(5)}`;
+            $('#addressText').text(`Lat: ${lat.toFixed(5)}, Lng: ${lng.toFixed(5)}`);
         }
-        updateAddress(surabaya[0], surabaya[1]);
+        updateAddress(startCoords[0], startCoords[1]);
 
-        marker.on('moveend', function (e) {
-            const { lat, lng } = e.target.getLatLng();
+        marker.on('moveend', e => {
+            let { lat, lng } = e.target.getLatLng();
             updateAddress(lat, lng);
         });
-        map.on('click', function (e) {
+        map.on('click', e => {
             marker.setLatLng(e.latlng);
             updateAddress(e.latlng.lat, e.latlng.lng);
         });
-        document.getElementById('changeLocation').addEventListener('click', function () {
+        $('#changeLocation').click(() => {
             map.invalidateSize();
             map.setView(marker.getLatLng(), 13);
         });
-
-        // Tombol Konfirmasi Lokasi di Peta
-        document.getElementById('confirmMapLocation').addEventListener('click', function () {
-            const { lat, lng } = marker.getLatLng();
-            document.getElementById('alamatManual').value = `Lat: ${lat.toFixed(5)}, Lng: ${lng.toFixed(5)}`;
-            // Opsional: Bisa otomatis switch ke mode alamat manual jika mau (hilangkan komentar di bawah)
-            // document.getElementById('modeAlamat').checked = true;
-            // document.getElementById('alamatManual').disabled = false;
-            // document.getElementById('mapSection').style.display = 'none';
+        $('#confirmMapLocation').click(() => {
+            let { lat, lng } = marker.getLatLng();
+            $('#alamatManual').val(`Lat: ${lat.toFixed(5)}, Lng: ${lng.toFixed(5)}`);
         });
 
-        // Update biaya otomatis
-        document.getElementById('armadaType').addEventListener('change', function () {
+        // Update biaya berdasarkan armada
+        $('#armadaType').on('change', function () {
             let cost = this.value === 'besar' ? 200000 : 100000;
-            document.getElementById('totalCost').textContent = `Rp${cost.toLocaleString('id-ID')}`;
+            $('#totalCost').text(`Rp${cost.toLocaleString('id-ID')}`);
+        });
+
+        // Konfirmasi penjemputan
+        $('#btnConfirm').on('click', function () {
+            let paymentMode = $('input[name="payment"]:checked').val();
+
+            if (paymentMode === 'online') {
+                // Generate QR random (contoh string acak)
+                let qrValue = `https://example.com/pay/${Math.random().toString(36).substr(2, 8)}`;
+                let qrUrl = `https://api.qrserver.com/v1/create-qr-code/?data=${encodeURIComponent(qrValue)}&size=200x200`;
+
+                Swal.fire({
+                    title: 'WAITING FOR PAYMENT',
+                    text: 'Scan QR di atas untuk melakukan pembayaran:',
+                    imageUrl: qrUrl,
+                    imageWidth: 200,
+                    imageHeight: 200,
+                    imageAlt: 'QR Code Pembayaran',
+                    confirmButtonText: 'Cek Transaksi',
+                    showCancelButton: true,
+                    cancelButtonText: 'Batal'
+                }).then((result) => {
+                    if (result.isConfirmed) {
+                        Swal.fire('Terima kasih!', 'Pembayaran Anda sudah diterima.', 'success');
+                    }
+                });
+            } else {
+                // COD atau lainnya
+                Swal.fire('Berhasil!', 'Layanan berhasil diterima', 'success');
+            }
         });
     </script>
 </body>
