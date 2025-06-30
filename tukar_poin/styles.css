@@ -1,0 +1,231 @@
+/* ============================
+   Card-Box Wrapper
+   ============================ */
+.card-box {
+    background-color: #ffffff;
+    border-radius: 0.75rem;
+    /* sudut membulat */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    max-width: 1200px;
+    /* lebar maksimum */
+    margin: 2rem auto;
+    /* centre & jarak atas bawah */
+    padding: 1rem;
+    /* padding di dalam card */
+}
+
+/* Override padding default .container di dalam .card-box */
+.card-box>.container {
+    padding-left: 0;
+    padding-right: 0;
+    max-width: 100%;
+}
+
+/* ============================
+   Global & Reset
+   ============================ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f9f9f9;
+    font-family: 'Baloo 2', cursive;
+    background: url('../assets/bg_pick_up.png') no-repeat center center/cover;
+    font-weight: 600;
+    color: #333;
+    line-height: 1.5;
+}
+
+/* ============================
+   Header
+   ============================ */
+header.site-header {
+    background-color: #2B6F35;
+    padding: 1rem;
+}
+
+header.site-header .navbar-brand {
+    color: #fff;
+    font-weight: 600;
+    font-size: 1.75rem;
+}
+
+/* ============================
+   Breadcrumb
+   ============================ */
+nav.breadcrumb {
+    background: transparent;
+    padding-left: 0;
+    margin-bottom: 1rem;
+}
+
+nav.breadcrumb .breadcrumb-item+.breadcrumb-item::before {
+    content: "›";
+    color: #999;
+    padding: 0 0.5rem;
+}
+
+nav.breadcrumb .breadcrumb-item a {
+    color: #2B6F35;
+    text-decoration: none;
+}
+
+nav.breadcrumb .breadcrumb-item.active {
+    color: #555;
+}
+
+/* ============================
+   Page Title & Filter Bar
+   ============================ */
+h1.page-title {
+    color: #2B6F35;
+    font-weight: 700;
+    font-size: 2rem;
+    margin-right: 1.5rem;
+}
+
+.slider-label {
+    font-weight: 600;
+    margin-right: 0.75rem;
+    color: #333;
+}
+
+.custom-range {
+    width: 250px;
+    margin: 0 0.75rem;
+}
+
+.btn-apply,
+.btn-apply:hover {
+    background-color: #2B6F35;
+    color: #fff;
+    border: none;
+}
+
+/* ============================
+   Voucher Cards Grid
+   ============================ */
+.card-voucher {
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.card-voucher .card-header {
+    padding: 0.75rem 1rem;
+    font-weight: 600;
+    color: #fff;
+}
+
+.card-voucher .card-body {
+    padding: 1rem;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-voucher .btn {
+    margin-top: auto;
+}
+
+/* ============================
+   Partner Merchant List
+   ============================ */
+.partner-card {
+    background: #fff;
+    border: 1px solid #dfe8df;
+    border-radius: 8px;
+    padding: 0.75rem 1rem;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    transition: background-color 0.2s;
+}
+
+.partner-card:hover {
+    background-color: #ebf7eb;
+    cursor: pointer;
+}
+
+.partner-icon {
+    font-size: 1.75rem;
+    color: #2B6F35;
+    width: 45px;
+    text-align: center;
+    margin-right: 0.75rem;
+}
+
+.partner-details h6 {
+    margin: 0;
+    font-weight: 700;
+    color: #2B6F35;
+}
+
+.partner-details small {
+    color: #555;
+}
+
+.partner-since {
+    margin-left: auto;
+    background: #E0F4E0;
+    color: #2B6F35;
+    padding: 0.25rem 0.75rem;
+    border-radius: 12px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+/* ============================
+   Info Saldo (Tukar Poin) Bar
+   ============================ */
+.info-balance {
+    background-color: #E0F4E0;
+    border-radius: 8px;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.info-balance i {
+    font-size: 1.5rem;
+    color: #2B6F35;
+    margin-right: 0.75rem;
+}
+
+.info-balance .text {
+    font-size: 20px;
+    font-weight: 600;
+    color: #2B6F35;
+}
+
+/* ============================
+   Footer
+   ============================ */
+footer.site-footer {
+    background-color: #2B6F35;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 2rem;
+}
+
+footer.site-footer a {
+    color: #fff;
+    text-decoration: underline;
+}
+
+.eco-value {
+    font-weight: 600;
+    color: #2B6F35;
+    min-width: 50px;
+    text-align: center;
+}

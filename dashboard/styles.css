@@ -18,18 +18,22 @@
 
         h3,
         p {
-            color: white; 
+            color: white;
 
         }
 
         .hero-section {
+            position: relative;
+            /* supaya child absolute mengacu ke sini */
+            min-height: 300px;
             background: url('https://via.placeholder.com/1920x600/28a745/ffffff?text=Smart+Environment') no-repeat center center/cover;
             color: white;
             text-align: center;
             padding: 120px 0;
         }
 
-        h2, .hero-section h2 {
+        h2,
+        .hero-section h2 {
             color: white;
             text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.5);
             font-weight: bold;
@@ -39,7 +43,7 @@
         .hero-section p {
             font-size: 20px;
             margin-top: 20px;
-            color: white; 
+            color: white;
             text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
             padding-bottom: 10px;
         }
@@ -191,6 +195,13 @@
             /* Efek bayangan ringan di sekitar peta */
         }
 
+        #map-container h5,
+        p {
+            color: #28a745;
+            font-size: 24px;
+            font-weight: 800;
+        }
+
         #map {
             width: 100%;
             /* Agar peta mengambil lebar 100% dari container */
@@ -198,4 +209,102 @@
             /* Menyesuaikan tinggi peta */
             border-radius: 6px;
             /* Sudut melengkung untuk peta */
+        }
+
+        /* Profil card */
+        /* ================= Profile Card ================= */
+        /* ============ Profile Card ============ */
+        .profile-card {
+            position: absolute;
+            margin-left: 30px;
+            top: 24px;
+            left: 24px;
+            width: 270px;
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(43, 111, 53, 0.15);
+            font-family: 'Segoe UI', sans-serif;
+            overflow: hidden;
+            z-index: 1000;
+        }
+
+        /* Header: avatar + greeting + toggle */
+        .profile-header {
+            display: flex;
+            align-items: center;
+            padding: 8px 12px;
+            cursor: pointer;
+        }
+
+        .profile-avatar img {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 1px solid #2B6F35;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            margin-right: 18px;
+            margin-left: 10px;
+        }
+
+        .profile-greeting {
+            flex: 1;
+            font-size: 24px;
+            font-weight: 600;
+            color: #2B6F35;
+        }
+
+        .profile-toggle {
+            background: none;
+            border: none;
+            font-size: 22px;
+            color: #2B6F35;
+            transition: transform 0.3s;
+        }
+
+        /* Menu: tersembunyi default, harmonisasi like YouTube subscriptions */
+        .profile-menu {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease;
+            background: #fff;
+        }
+
+        /* Ketika dibuka: beri max-height besar untuk menampung isinya */
+        .profile-card.open .profile-menu {
+            max-height: 300px;
+            /* sesuaikan dengan jumlah item */
+        }
+
+        /* Daftar link/menu */
+        .profile-menu ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .profile-menu li {
+            padding: 10px 12px;
+            font-size: 20px;
+            color: #2B6F35;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        .profile-menu li a {
+            color: #2B6F35;
+            text-decoration: none;
+        }
+
+        .profile-menu li.divider {
+            height: 1px;
+            background: #e0f4e0;
+            margin: 6px 0;
+            padding: 0;
+            border: none;
+        }
+
+        /* Scrollable jika menu terlalu panjang seperti YouTube */
+        .profile-menu.open {
+            overflow-y: auto;
         }

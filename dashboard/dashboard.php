@@ -16,6 +16,29 @@
 
 <body>
     <div class="content">
+        <!-- Profile Card di dalam hero-section (atau di wrapper .content) -->
+        <div class="profile-card" id="profileCard" style="cursor:pointer;">
+            <div class="profile-header">
+                <div class="profile-avatar">
+                    <img src="../assets/profile.png" alt="Avatar">
+                </div>
+                <div class="profile-greeting">Hi, John</div>
+                <button class="profile-toggle" id="profileToggle">▾</button>
+            </div>
+            <div class="profile-menu" id="profileMenu">
+                <ul>
+                    <li onclick="window.location.href='../tukar_sampah/tukar_sampah.php'"><strong>Balance:</strong> Rp
+                        250.000</li>
+                    <li><strong>Eco-Points:</strong> 1.250 pt</li>
+                    <li class="divider"></li>
+                    <li><a href="#settings">Settings</a></li>
+                    <!-- Anda bisa tambahkan links lain: Profile, Logout, dsb. -->
+                </ul>
+            </div>
+        </div>
+
+
+
         <div class="hero-section">
             <h2>Selamat Datang di RESIK</h2>
             <p>Ubah sampah Anda menjadi poin dan hadiahkan untuk masa depan yang lebih hijau!</p>
@@ -26,7 +49,8 @@
             <h3>Layanan Kami</h3>
             <div class="row justify-content-center">
                 <div class="col-md-3">
-                     <div class="feature-card" style="cursor:pointer;" onclick="window.location.href='../tukar_sampah/tukar_sampah.php'">
+                    <div class="feature-card" style="cursor:pointer;"
+                        onclick="window.location.href='../tukar_sampah/tukar_sampah.php'">
                         <img src="../assets/tukarsampah.png" alt="Penukaran Sampah">
                         <h4>Penukaran Sampah</h4>
                         <p>Jual sampah Anda dan dapatkan poin untuk ditukarkan dengan hadiah menarik.</p>
@@ -41,14 +65,16 @@
                     </div>
                 </div>
                 <div class="col-md-3">
-                    <div class="feature-card" style="cursor:pointer;" onclick="window.location.href='../pricelist/pricelist.php'">
+                    <div class="feature-card" style="cursor:pointer;"
+                        onclick="window.location.href='../pricelist/pricelist.php'">
                         <img src="../assets/listsampah.png" alt="Pricelist Sampah">
                         <h4>Klasifikasi Sampah</h4>
                         <p>Cek harga terbaru untuk setiap jenis sampah yang bisa ditukarkan.</p>
                     </div>
                 </div>
                 <div class="col-md-3">
-                    <div class="feature-card" style="cursor:pointer;" onclick="window.location.href='../jadwal_penjemputan/jadwal.php'">
+                    <div class="feature-card" style="cursor:pointer;"
+                        onclick="window.location.href='../jadwal_penjemputan/jadwal.php'">
                         <img src="../assets/schedulesampah.png" alt="Jadwal Penjemputan">
                         <h4>Jadwal Penjemputan</h4>
                         <p>Jadwal layanan penjemputan sampah dengan pilihan waktu yang fleksibel.</p>
@@ -75,9 +101,9 @@
                     </div>
                 </div>
                 <div class="col-md-3">
-                    <div class="scale-card">
+                    <div class="scale-card" style="cursor: pointer;" onclick="window.location.href='../tukar_poin/tukar_poin.php'">
                         <img src="../assets/kerjasama.png" alt="Merchants">
-                        <h4>Merchant Kerja Sama</h4>
+                        <h4>Tukar Poin</h4>
                         <p>Bergabung dengan berbagai merchant untuk meningkatkan pemberdayaan sampah di masyarakat.</p>
                     </div>
                 </div>
@@ -171,6 +197,32 @@
         });
 
     </script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const card = document.getElementById('profileCard');
+            const toggle = document.getElementById('profileCard');
+            const arrow = document.getElementById('profileToggle');
+
+            toggle.addEventListener('click', () => {
+                card.classList.toggle('open');
+                // Animasi panah berputar
+                arrow.style.transform = card.classList.contains('open')
+                    ? 'rotate(180deg)' // menunjuk ke atas saat dibuka
+                    : 'rotate(0deg)';  // menunjuk ke bawah saat tertutup
+            });
+
+            // Optional: klik di luar card menutup dropdown
+            document.addEventListener('click', (e) => {
+                if (!card.contains(e.target)) {
+                    card.classList.remove('open');
+                    arrow.style.transform = 'rotate(0deg)';
+                }
+            });
+        });
+
+    </script>
+
 
 </body>
 
