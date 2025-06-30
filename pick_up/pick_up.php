@@ -100,7 +100,7 @@
                 </div>
 
                 <div class="total-display mb-3">
-                    <strong>Total:</strong> <span id="totalCost">Rp150.000</span>
+                    <strong>Total:</strong> <span id="totalCost">Rp25.000</span>
                 </div>
 
                 <button id="btnConfirm" class="btn btn-success btn-block">Konfirmasi Penjemputan</button>
